@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Side Menu</title>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSideMenu()">
+
+                <!-- https://ionicons.com/ -->
+                <ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+                
+            </a>
+        </span>
+
+        <ul class="navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="main">
+        <h1>Responsive Side Menu</h1>
+    </div>
+
+    <script>
+        function openSideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('main').style.marginLeft = '250px';
+        }
+
+        function closeSideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
+    </script>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</body>
+</html>
