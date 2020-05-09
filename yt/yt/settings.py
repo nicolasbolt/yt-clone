@@ -123,3 +123,6 @@ STATIC_URL = '/static/'
 
 #Crispy Forms Template Pack
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+#Media Files
+MEDIA_ROOT = BASE_DIR + "/media/"
