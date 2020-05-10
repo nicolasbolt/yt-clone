@@ -2,13 +2,23 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-md-8 col-sm-12 col-xs-12">
-            <video width="640", height="480" controls>
+            <video width="720", height="405" controls>
                 <source src="/media/{{ object.videoFile }}" type="video/mp4">
                 Your browser does not support the video tag
             </video>
             <h5>{{ object.title }}</h5>
+            <div class="row">
+                <div class="col-md-6 text-muted">
+                    <p>Date</p>
+                </div>
+                <div class="col-md-6 text-muted text-right">
+                    <ion-icon name="pencil-outline"></ion-icon>
+                    <ion-icon name="close-outline"></ion-icon>
+                    
+                </div>
+            </div>
             <hr>
             <p> {{ object.description }}</p>
         </div>
