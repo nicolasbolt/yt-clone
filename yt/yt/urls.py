@@ -22,5 +22,6 @@ import videos.views as video_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', video_views.index, name='index'),
-    path('videos/', include('videos.urls'))
+    path('videos/', include('videos.urls')),
+    path('accounts/', include('allauth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
