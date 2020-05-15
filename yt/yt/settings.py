@@ -32,18 +32,17 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-
     'videos',
+    'profiles',
+    'users',
+
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.sites',
+#    'django.contrib.sites',
 
     'django.contrib.staticfiles',
 ]
