@@ -13,11 +13,13 @@
                 <div class="col-md-6 text-muted">
                     <p>Date</p>
                 </div>
+                {% if object.uploader == user %}
                 <div class="col-md-6 text-muted text-right">
                     <ion-icon name="pencil-outline"></ion-icon>
-                    <ion-icon name="close-outline"></ion-icon>
-                    
+                    <ion-icon name="close-outline"></ion-icon>  
                 </div>
+                {% endif %}
+
             </div>
             <hr>
             <p> {{ object.description }}</p>
