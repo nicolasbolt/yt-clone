@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-#    'django.contrib.sites',
+    'django.contrib.sites',
 
     'django.contrib.staticfiles',
 ]
@@ -146,10 +146,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# Email Settings
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# EMAIL_USE_TLS = True
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'me@gmail.com'
-# EMAIL_HOST_PASSWORD = 'password'
+# # Email Settings
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# # EMAIL_USE_TLS = True
+# # EMAIL_HOST = 'smtp.gmail.com'
+# # EMAIL_PORT = 587
+# # EMAIL_HOST_USER = 'me@gmail.com'
+# # EMAIL_HOST_PASSWORD = 'password'
+
+# Authentication Settings
+LOGIN_REDIRECT_URL = 'index'
