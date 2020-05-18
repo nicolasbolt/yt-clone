@@ -3,18 +3,14 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row justify-content-center pt-5">
-        <div class="col-md-6 col-sm-12 col-xs-12 text-center">
-            <h1>Create Video</h1>
-        </div>
-    </div>
+<div class="container mb-5">
     <div class="row justify-content-center">
         <div class="col-md-6 col-sm-12 col-xs-12">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
+                <legend class="border-bottom mb-4">Upload Video</legend>
                 {{ form | crispy }}
-                <button class="btn btn-outline-primary btn-block" type="submit">Submit</button>
+                <button class="btn btn-outline-info btn-block" type="submit">Submit</button>
             </form>
         </div>
     </div>

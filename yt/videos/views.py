@@ -13,7 +13,7 @@ class IndexView(ListView):
 
 class CreateVideo(LoginRequiredMixin, CreateView):
     model = Video
-    fields = ['title', 'description', 'videoFile']
+    fields = ['title', 'description', 'thumbnail', 'videoFile']
     template_name = 'videos/create_video.html'
 
     def form_valid(self, form):
