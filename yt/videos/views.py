@@ -9,6 +9,7 @@ from .models import Video
 class IndexView(ListView):
     model = Video
     template_name = 'videos/index.html'
+    ordering = '-date_posted'
 
 class CreateVideo(LoginRequiredMixin, CreateView):
     model = Video
