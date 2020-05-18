@@ -1,5 +1,18 @@
 {% extends 'videos/base.html' %}
 
 {% block content %}
-    <h1>Index Page</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            {% for object in object_list %}
+            <div class="card col-md-3 col-sm-12 col-xs-12 mr-md-3 mt-2">
+                <img src="{{ object.thumbnail.url }}" class="card-img-top pt-2" alt="thumbnail">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ object.title }}</h5>
+                    <p class="card-text text-muted text-center"><span class="mr-4">{{ object.uploader }}</span><span>{{ object.date_posted | date:"M d, Y" }}</span></p>
+                    <a href="{% url 'video-detail' object.pk %}" class="stretched-link"></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock content %}
