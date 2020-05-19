@@ -1,14 +1,19 @@
-from django.shortcuts import render
-# from django.views import View
-from django.views.generic.detail import DetailView
+from django.shortcuts import render, get_object_or_404
+from django.views import View
 from .models import Profile
+from videos.models import Video
 
-# class ProfileView(View):
+class ProfileView(View):
+    
+    def get(self, request, pk, *args, **kwargs):
+        profile = get_object_or_404(Profile, pk=pk)
+        videos = Video.objects.all().filter(uploader=pk).order_by('-date_posted')
 
-#     def get(self, request, *args, **kwargs):
-#         return render(request, 'profiles/profile.html')
+        context = {
+            'profile': profile,
+            'videos' : videos
+        }
 
-class ProfileView(DetailView):
-    model = Profile
-    template_name = 'profiles/profile.html'
+
+        return render(request, 'profiles/profile.html', context)
 
