@@ -16,7 +16,7 @@
         <li class="nav-item mr-3">
             <a href="{% url 'logout' %}" class="nav-link">Sign Out</a>
         </li>
-        <a href="{% url 'profile' %}"><img class="rounded-circle" src="{{ user.profile.image.url }}" height=35 width=35 /></a>
+        <a href="{% url 'profile' user.profile.pk %}"><img class="rounded-circle" src="{{ user.profile.image.url }}" height=35 width=35 /></a>
       </ul>
       {% else %}
       <ul class="navbar-nav">
