@@ -26,3 +26,5 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('accounts/', include('users.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'videos.views.not_found'

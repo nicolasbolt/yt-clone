@@ -5,6 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from .models import Video
+from django.views.defaults import page_not_found
 
 class IndexView(ListView):
     model = Video
@@ -53,5 +54,8 @@ class DeleteVideo(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == video.uploader:
             return True
         return False
+
+def not_found(request, exception):
+    return page_not_found(request, exception, template_name = 'videos/not-found.html')
 
 
