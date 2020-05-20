@@ -1,5 +1,6 @@
 .social-share-icons {
     font-size: 3rem;
+    transition: 0.3s;
 }
 
 .social-share-icons:hover {
@@ -21,7 +22,8 @@
 }
 
 .video-icons {
-    font-size: 1.8rem;;
+    font-size: 1.8rem;
+    transition: 0.3s;
 }
 
 .video-icons:hover {
@@ -32,6 +34,7 @@
 
 .icon-color {
     color: #777;
+    transition: 0.3s;
 }
 
 .icon-color:hover {
@@ -44,6 +47,7 @@
 .video-uploader {
     color: #333;
     font-weight: 800;
+    transition: 0.3s;
 }
 
 .video-uploader:hover {
