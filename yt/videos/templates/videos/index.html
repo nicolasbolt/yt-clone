@@ -8,7 +8,10 @@
                 <img src="{{ object.thumbnail.url }}" class="card-img-top pt-2" alt="thumbnail">
                 <div class="card-body">
                     <h5 class="card-title text-center">{{ object.title }}</h5>
-                    <p class="card-text text-muted text-center"><span class="mr-4">{{ object.uploader }}</span><span>{{ object.date_posted | date:"M d, Y" }}</span></p>
+                    <div class="d-flex flex-row align-items-center">
+                        <img src="{{ object.uploader.profile.image.url }}" class="rounded-circle mr-2" height="40" width="40" />
+                    <p class="card-text text-muted text-center"><span class="mr-2">{{ object.uploader }}</span><span>{{ object.date_posted | date:"M d, Y" }}</span></p>
+                    </div>
                     <a href="{% url 'video-detail' object.pk %}" class="stretched-link"></a>
                 </div>
             </div>
